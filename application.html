@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to apply skincare? - Aura Skin Lab</title>
+  <style>
+    :root {
+      --primary: #2C4A3E;
+      --primary-light: #EBF2EE;
+      --accent: #D4A373;
+      --bg: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --text: #2B2B2B;
+      --text-muted: #666666;
+      --border: #E2E0D8;
+      --disclaimer-bg: #FFF3CD;
+      --disclaimer-border: #FFEEBA;
+      --disclaimer-text: #856404;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .disclaimer-banner {
+      background-color: var(--disclaimer-bg);
+      color: var(--disclaimer-text);
+      border-bottom: 1px solid var(--disclaimer-border);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 16px;
+    }
+
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+
+    .page-header {
+      margin-bottom: 32px;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .order-guide {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .order-guide h2 {
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-size: 1.35rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid var(--accent);
+    }
+
+    .timeline-item {
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .tip-card {
+      background-color: var(--primary-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .tip-card h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .tip-card p {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 24px 16px;
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-nav {
+      margin-bottom: 16px;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .footer-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .footer-nav a:hover {
+      color: var(--primary);
+    }
+
+    @media (min-width: 600px) {
+      .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="disclaimer-banner">
+    This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand-title">Aura Skin Lab</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skin-type.html">What is my skin type?</a></li>
+          <li><a href="routine.html">Build a skincare routine</a></li>
+          <li><a href="application.html" class="active">How to apply skincare?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Application Techniques & Layering Order</h1>
+      <p>Applying products in the correct sequence ensures active ingredients penetrate effectively without causing irritation.</p>
+    </div>
+
+    <div class="order-guide">
+      <h2>The Golden Rule: Thinnest to Thickest</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Step 1: Cleansing</h3>
+          <p>Massage cleanser onto damp skin using circular motions for 60 seconds. Rinse thoroughly with lukewarm water to avoid irritating blood vessels.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Step 2: Liquid Serums & Toners</h3>
+          <p>Apply water-based liquids onto slightly damp skin. Gently press formulas into your face and neck using palm pressure rather than harsh rubbing.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Step 3: Treatment Serums</h3>
+          <p>Dispense 3-4 drops of active treatments (such as Vitamin C, Niacinamide, or Retinol). Allow 1-2 minutes for absorption before proceeding.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Step 4: Moisturizers</h3>
+          <p>Smooth creams and emulsions over the entire face to seal in water hydrates and strengthen your lipid barrier.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Step 5: Sunscreen (AM Only)</h3>
+          <p>Apply a nickel-sized amount of sunscreen as your final step every morning. Reapply every two hours when outdoors.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="color: var(--primary); margin-bottom: 16px;">Essential Application Tips</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>Wait Between Actives</h3>
+        <p>Give strong active ingredients like Vitamin C and exfoliating acids 60 to 90 seconds to absorb before applying subsequent products to preserve formula efficacy.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>Apply to Damp Skin</h3>
+        <p>Humectants like Hyaluronic Acid draw moisture into the skin. Apply them onto slightly damp skin after washing to lock in maximum water hydration.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>Never Skip the Neck</h3>
+        <p>Extend all serum, moisturizing, and sunscreen applications down your neck and chest. These areas have thin skin that shows early signs of aging.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>Patch Test New Products</h3>
+        <p>Before applying a new product to your entire face, dab a small amount behind your ear or on your inner wrist for 24 hours to monitor for allergic reactions.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skin-type.html">What is my skin type?</a></li>
+          <li><a href="routine.html">Build a skincare routine</a></li>
+          <li><a href="application.html">How to apply skincare?</a></li>
+        </ul>
+      </div>
+      <div class="disclaimer-banner">
+        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
