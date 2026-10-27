@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build a skincare routine - Aura Skin Lab</title>
+  <style>
+    :root {
+      --primary: #2C4A3E;
+      --primary-light: #EBF2EE;
+      --accent: #D4A373;
+      --bg: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --text: #2B2B2B;
+      --text-muted: #666666;
+      --border: #E2E0D8;
+      --disclaimer-bg: #FFF3CD;
+      --disclaimer-border: #FFEEBA;
+      --disclaimer-text: #856404;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .disclaimer-banner {
+      background-color: var(--disclaimer-bg);
+      color: var(--disclaimer-text);
+      border-bottom: 1px solid var(--disclaimer-border);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 16px;
+    }
+
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+
+    .page-header {
+      margin-bottom: 32px;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .routine-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .routine-block h2 {
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-size: 1.35rem;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 8px;
+    }
+
+    .step-list {
+      list-style: none;
+    }
+
+    .step-item {
+      margin-bottom: 16px;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-title {
+      font-weight: 700;
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .step-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .product-recommendations {
+      margin-top: 12px;
+      background-color: var(--primary-light);
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .product-recommendations strong {
+      color: var(--primary);
+    }
+
+    footer {
+      background-color: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 24px 16px;
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-nav {
+      margin-bottom: 16px;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .footer-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .footer-nav a:hover {
+      color: var(--primary);
+    }
+
+    @media (min-width: 600px) {
+      .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="disclaimer-banner">
+    This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand-title">Aura Skin Lab</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skin-type.html">What is my skin type?</a></li>
+          <li><a href="routine.html" class="active">Build a skincare routine</a></li>
+          <li><a href="application.html">How to apply skincare?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Customized Skincare Routines</h1>
+      <p>Select your skin type below to view tailored morning and evening regimens featuring active ingredients matched to your needs.</p>
+    </div>
+
+    <div class="routine-block">
+      <h2>Oily & Acne-Prone Skin Routine</h2>
+      <ul class="step-list">
+        <li class="step-item">
+          <span class="step-title">Morning Routine:</span>
+          <p class="step-desc">Focus on clearing excess sebum without stripping natural hydration, followed by lightweight sun protection.</p>
+          <div class="product-recommendations">
+            <strong>Recommended Ingredients:</strong> Salicylic Acid Cleanser, Niacinamide Serum, Oil-Free Gel Moisturizer, Mineral SPF 30+.
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-title">Evening Routine:</span>
+          <p class="step-desc">Double clean to unclog pores and apply targeted actives to refine skin texture while resting.</p>
+          <div class="product-recommendations">
+            <strong>Recommended Ingredients:</strong> Gentle Foaming Gel Wash, BHA Liquid Exfoliant (2x weekly), Lightweight Hydrating Lotion.
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="routine-block">
+      <h2>Dry & Dehydrated Skin Routine</h2>
+      <ul class="step-list">
+        <li class="step-item">
+          <span class="step-title">Morning Routine:</span>
+          <p class="step-desc">Replenish essential surface lipids and protect against environmental drying factors.</p>
+          <div class="product-recommendations">
+            <strong>Recommended Ingredients:</strong> Creamy Non-Foaming Cleanser, Hyaluronic Acid Hydrating Serum, Ceramide Cream, Broad-Spectrum SPF 50.
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-title">Evening Routine:</span>
+          <p class="step-desc">Lock in deep moisture with soothing oils and barrier-restoring creams to prevent moisture loss overnight.</p>
+          <div class="product-recommendations">
+            <strong>Recommended Ingredients:</strong> Hydrating Cleansing Balm, Glycerin & Peptide Serum, Rich Lipid Barrier Night Cream.
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="routine-block">
+      <h2>Combination & Sensitive Skin Routine</h2>
+      <ul class="step-list">
+        <li class="step-item">
+          <span class="step-title">Morning Routine:</span>
+          <p class="step-desc">Soothe inflammation and restore balance across dry areas and oily zone variations.</p>
+          <div class="product-recommendations">
+            <strong>Recommended Ingredients:</strong> pH-Balanced Gel Cleanser, Centella Asiatica Soothing Serum, Lightweight Cream Gel, Gentle Mineral Sunscreen.
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-title">Evening Routine:</span>
+          <p class="step-desc">Calm environmental stress and gently encourage cell turnover without provoking redness.</p>
+          <div class="product-recommendations">
+            <strong>Recommended Ingredients:</strong> Micellar Water Pre-wash, Mild Hydrating Cleanser, Lactic Acid (1-2x weekly), Squalane Moisturizer.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skin-type.html">What is my skin type?</a></li>
+          <li><a href="routine.html">Build a skincare routine</a></li>
+          <li><a href="application.html">How to apply skincare?</a></li>
+        </ul>
+      </div>
+      <div class="disclaimer-banner">
+        This is a fictional website created for educational purposes as part of MKTG:4400 at the University of Iowa. It is not a real business.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
